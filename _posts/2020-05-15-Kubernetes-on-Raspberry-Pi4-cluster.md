@@ -98,9 +98,9 @@ Based on [alexellis](https://github.com/alexellis)'s [preparation script](https:
 
 Then update and run the following commands on each of them:
 
-- Update /etc/hosts
+Update /etc/hosts
 ```
-export DOMAIN_NAME=[mydomain.local]
+export DOMAIN_NAME=domain.local
 cat <<EOF | sudo tee -a /etc/hosts
 192.168.254.10  master.${DOMAIN_NAME} master
 192.168.254.11  worker01.${DOMAIN_NAME} worker01
@@ -108,7 +108,8 @@ cat <<EOF | sudo tee -a /etc/hosts
 192.168.254.13  worker03.${DOMAIN_NAME} worker03
 EOF
 ```
-- Ensure iptables tooling does not use the nftables backend
+
+Ensure iptables tooling does not use the nftables backend
 ```
 cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
 net.bridge.bridge-nf-call-ip6tables = 1
@@ -123,7 +124,7 @@ sudo apt-get update
 sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 ```
 
-- Install docker
+Install docker
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
@@ -143,13 +144,13 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-- Disable swap
+Disable swap
 ```
 sudo swapoff -a
 sudo echo "vm.swappiness=0" | sudo tee -a /etc/sysctl.conf
 ```
 
-- Install Kubernetes
+Install Kubernetes
 ```
 sudo apt-get update && sudo apt-get install -y apt-transport-https curl
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
@@ -161,11 +162,11 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-- Enabling CGroup Memory
+Enabling CGroup Memory
 ```
-sudo cp  /boot/firmware/nobtcmd.txt /boot/cmdline_backup.txt.orig
-orig="$(head -n1 /boot/firmware/nobtcmd.txt ) ipv6.disable=1 cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1"
-echo $orig | sudo tee /boot/firmware/nobtcmd.txt
+sudo cp  /boot/firmware/cmdline.txt /boot/firmware/cmdline.txt.orig
+orig="$(head -n1 /boot/firmware/cmdline.txt ) ipv6.disable=1 cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1"
+echo $orig | sudo tee /boot/firmware/cmdline.txt
 ```
 
 You can apply all steps before running
