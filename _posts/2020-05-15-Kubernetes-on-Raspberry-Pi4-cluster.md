@@ -85,7 +85,7 @@ EOF
 sed s/CHANGEME/10/g 99_config.yaml> /mnt/rpi/root/etc/netplan/99_config.yaml
 echo "network: {config: disabled}" > /mnt/rpi/root/etc/cloud/cloud.cfg.d/99-custom-networking.cfg
 ```
-Repeat the above, changing the hostname, for each Raspberry Pi.
+
 Remember to umount the SD card partitions before removing.
 ```
 umount /mnt/rpi/boot
