@@ -101,7 +101,7 @@ author:
       icon: "fab fa-redhat"
       url: "https://quay.io/user/enr0s"
     - label: "Docker Hub"
-      icon: "fa fa-docker"
+      icon: "fab fa-docker"
       url: "https://hub.docker.com/u/enr0s"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
