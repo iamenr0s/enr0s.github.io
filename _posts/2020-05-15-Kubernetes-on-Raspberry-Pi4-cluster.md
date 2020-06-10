@@ -56,13 +56,18 @@ mkdir /mnt/rpi/root
 mkdir -p /mnt/rpi/root/home/ubuntu/.ssh/
 cat ~/.ssh/id_rsa.pub > /mnt/rpi/root/home/ubuntu/.ssh/authorized_keys
 chown -R 1000:1000 /mnt/rpi/root/home/ubuntu
-sed -ie s/#PasswordAuthentication\ yes/PasswordAuthentication\ no/g /mnt/rpi/root/etc/ssh/sshd_config
+sed -i 's/PasswordAuthentication\ yes/PasswordAuthentication\ no/g' /mnt/rpi/root/etc/ssh/sshd_config
+```
+Preserve hostname changing cloud init configuration
+
+```
+sed -i 's/preserve_hostname.*/preserve_hostname: true/g' /mnt/rpi/root/etc/cloud/cloud.cfg
 ```
 
 Set the hostname
 
 ```
-sed -ie s/ubuntu/master.k8s.enros.me/g /mnt/rpi/root/etc/hostname
+sed -i 's/ubuntu/master.domain.local/g' /mnt/rpi/root/etc/hostname
 ```
 
 and configured the network using a template:
