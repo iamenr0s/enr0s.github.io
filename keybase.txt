@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/iamenr0s
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blog.enros.me
+  * I am iamenr0s (https://keybase.io/iamenr0s) on keybase.
+  * I have a public key ASAZ9ucivUNncsHyZ-hejkLx_ipq2-fueuvPw-IWAXk4_wo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012019f6e722bd436772c1f267e85e8e42f1fe2a6adbe7ee7aebcfc3e216017938ff0a",
+      "host": "keybase.io",
+      "kid": "012019f6e722bd436772c1f267e85e8e42f1fe2a6adbe7ee7aebcfc3e216017938ff0a",
+      "uid": "4b93777798ade979001ca062bc70ea19",
+      "username": "iamenr0s"
+    },
+    "merkle_root": {
+      "ctime": 1675295374,
+      "hash": "006c3619a5aff45e54b709879c7ea1996d997e3d5a444bdce87dae1ba448b7261fd12171360c156594a6a80c98326039709a2c06b6186c9a172df023b4b4e5c7",
+      "hash_meta": "6da162c41e29965d272fec2dd20e4e767d478a0862af30a22834423d9ebb7375",
+      "seqno": 23974469
+    },
+    "service": {
+      "entropy": "Cj5Na/VeFQsMYJHObkksK6fb",
+      "hostname": "blog.enros.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.1"
+  },
+  "ctime": 1675295408,
+  "expire_in": 504576000,
+  "prev": "dbc931f4c10f605772afa491c274390fde4ec88d8af972fec4bd8d48a2ca9f24",
+  "seqno": 10,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgGfbnIr1DZ3LB8mfoXo5C8f4qatvn7nrrz8PiFgF5OP8Kp3BheWxvYWTESpcCCsQg28kx9MEPYFdyr6SRwnQ5D95OyI2K+XL+xL2NSKLKnyTEIGfHuaaOAYVJAn6DksDTI1fqUBifbYgbeCpu6ZgLfyUSAgHCo3NpZ8RAfdMciSh8Fw2wGuFJPQjyStdGAF8J4nq+vRyhFbNFo7hEFUD1mOL70VLlfHK2nN8anwKZFehiL0s/KQUNPpncC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIE457JacpkeMyOip67+JbXQlKQIHPdaEWch7lbbusY53o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/iamenr0s
+
+==================================================================
